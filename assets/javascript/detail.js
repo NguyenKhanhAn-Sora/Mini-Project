@@ -17,6 +17,9 @@ price2.innerText=tlsprice2;
 const tlsprice3 = priceTarget3.toLocaleString('vi-VN');
 price3.innerText=tlsprice3;
 
+// animateCounter('target', 500);
+// animateCounter('target2', 500);
+// animateCounter('target3', 500);
 
 plus.addEventListener("mouseover", plusMouseOver);
 plus.addEventListener("click", function() {
@@ -92,5 +95,7 @@ function animateCounter(target, duration) {
         }
         element.textContent = Math.round(currentValue).toLocaleString('vi-VN');
     }, 10);
+
 }
+
 

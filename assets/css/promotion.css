@@ -214,10 +214,11 @@ body {
     overflow: hidden;
 }
 
-.menu {
+#menu {
     display: flex;
     flex-wrap: nowrap;
-    transform: translateX(-113px);
+    /* transform: translateX(-113px); */
+    transition: transform 0.5s ease;
 }
 
 .menu_item {
@@ -275,6 +276,12 @@ body {
     opacity: 0.5;
     cursor: pointer;
 }
+
+.dot_active {
+    opacity: 1 !important;
+}
+
+/* ----------------------- Cart -------------------------- */
 
 .cart_menu {
     margin-top: 45px;
