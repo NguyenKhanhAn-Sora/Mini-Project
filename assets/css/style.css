@@ -440,20 +440,21 @@ body {
 /* ------------------ Special Content ----------------- */
 
 .special_content {
-    
+    overflow: hidden;
 }
 
 .special_content-list {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
     gap: 25px;
+    flex-wrap: nowrap;
 }
 
 .special_content-items {
     border-radius: 10px;
     box-shadow: 0px 2px 10px -3px rgba(0,0,0,0.3);
-    overflow: hidden    ;
+    overflow: hidden;
     padding: 12px 12px 20px;
+    width: 33%;
 }
 
 .special_content-items a {
@@ -805,7 +806,7 @@ body {
     z-index: 2;
     width: 100vw;
     height: 100vh;
-    display: block;
+    display: none;
 }
 
 .login_modal-container {
