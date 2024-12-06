@@ -29,42 +29,49 @@
                 <div class="header_info">
                     <div class="header_info-setting">
                         <div class="header_info-language">
-                                <div class="language">
-                                    <span>
-                                        English
-                                    </span>
-                                </div>
-                                <!-- <div class="">
-                                    <span>
-                                        Vietnamese
-                                    </span>
-                                </div> -->
+                            <span class="lang_en">
+                                English
+                            </span>
+                            <div class="lang_drop">
+                                <span class="lang_vn">
+                                    Vietnamese
+                                </span>
+                            </div>
                         </div>
-                        
-                        <a href="#!" class="dowload">
-                            <div>
-                                <img src="./assets/img/lotteria_logo.png" alt="">
+                        <div class="dowload_container">
+                            <div class="dowload">
+                                <img src="./assets/img/lotteria_logo.png" alt="Logo">
                                 <span>Download App</span>
                             </div>
-                        </a>
+                            <div class="dowload_drop">
+                                <div class="dowload_drop-inner">
+                                    <a target="_blank" href="https://apps.apple.com/vn/app/lotteria-vietnam/id1423528065">
+                                        <img src="https://www.lotteria.vn/grs-static/images/icon-appstore.png" alt="App Store">
+                                    </a>
+                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.cntt.vt.lotteria&pli=1">
+                                        <img src="https://www.lotteria.vn/grs-static/images/icon-googleplay.png" alt="Google Play">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <ul class="header_info-user">
-                        <li>
+                        <li class="header_info-user--item">
                             <a href="#!">
                                 <img src="./assets/img/icon-pos-2.svg" alt="">
                             </a>
                         </li>
-                        <li>
+                        <li class="header_info-user--item">
                             <a href="#!">
                                 <img src="./assets/img/icon-myaccount.svg" alt="">
                             </a>
                         </li>
-                        <li>
+                        <li class="header_info-user--item">
                             <a href="#!">
                                 <img src="./assets/img/icon-notification.svg" alt="">
                             </a>
                         </li>
-                        <li>
+                        <li class="header_info-user--item">
                             <a href="#!">
                                 <img src="./assets/img/icon-cart.svg" alt="">
                             </a>
@@ -102,10 +109,10 @@
                 </div>
             </div>
             <ul class="banner_dot">
-                <li class="dot dot_active"onclick="currentSlide(1)"></li>
-                <li class="dot" onclick="currentSlide(2)"></li>
-                <li class="dot" onclick="currentSlide(3)"></li>
-                <li class="dot" onclick="currentSlide(4)"></li>
+                <li class="banner_dot-item banner_dot-active"onclick="currentSlide(1)"></li>
+                <li class="banner_dot-item"></li>
+                <li class="banner_dot-item"></li>
+                <li class="banner_dot-item"></li>
             </ul>
         </div>
         <div class="content">
@@ -151,124 +158,208 @@
                     </div>
                 </div>
                 <div class="special_content">
-                    <div class="special_content-list">
-                        <div class="special_content-items">
-                            <a href="./detail.html">
-                                <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/m/e/menu_menu_tra_dau.jpg.webp" alt="">
-                                <div class="item_content">
-                                    <span class="title">
-                                        Combo 1
-                                    </span>
-                                    <div class="food">
-                                        <p>
-                                            01 Strawberry Tea <br> 01 Spaghetti 
-                                        </p>
-                                    </div>
-                                    <div class="oder">
-                                        <div class="cost">
-                                            <p class="new_price">
-                                                40.000 ₫
-                                            </p>
-                                            <p class="old_price">
-                                                <span>68.000 ₫</span>
+                    <div class="special_content-container">
+                        <div id="special_content-list">
+                            <div class="special_content-items">
+                                <a href="./detail.html">
+                                    <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/m/e/menu_menu_tra_dau.jpg.webp" alt="">
+                                    <div class="item_content">
+                                        <span class="title">
+                                            Combo 1
+                                        </span>
+                                        <div class="food">
+                                            <p>
+                                                01 Strawberry Tea <br> 01 Spaghetti 
                                             </p>
                                         </div>
-                                        <div class="plus">
-                                            <i class="fa-solid fa-plus"></i>
+                                        <div class="oder">
+                                            <div class="cost">
+                                                <p class="new_price">
+                                                    40.000 ₫
+                                                </p>
+                                                <p class="old_price">
+                                                    <span>68.000 ₫</span>
+                                                </p>
+                                            </div>
+                                            <div class="plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="special_content-items">
-                            <a href="./detail.html">
-                                <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/m/e/menu_menu_tra_sua_1__1.jpg.webp" alt="">
-                                <div class="item_content">
-                                    <span class="title">
-                                        Combo 2
-                                    </span>
-                                    <div class="food">
-                                        <p>
-                                            01 Milk Tea <br> 01 Chicken nuggets 
-                                        </p>
-                                    </div>
-                                    <div class="oder">
-                                        <div class="cost">
-                                            <p class="new_price">
-                                                40.000 ₫
-                                            </p>
-                                            <p class="old_price">
-                                                <span>57.000 ₫</span>
-                                            </p>
-                                        </div>
-                                        <div class="plus">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="special_content-items">
-                            <a href="./detail.html">
-                                <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/m/e/menu_menu_16_.jpg.webp" alt="">
-                                <div class="item_content">
-                                    <span class="title">
-                                        Combo 69K
-                                    </span>
-                                    <div class="food">
-                                        <p>
-                                            01 Fried Chicken <br> 01 Spaghetti 
-                                        </p>
-                                    </div>
-                                    <div class="oder">
-                                        <div class="cost">
-                                            <p class="new_price">
-                                                69.000 ₫
-                                            </p>
-                                            <p class="old_price">
-                                                <span>101.000 ₫</span>
+                                </a>
+                            </div>
+                            <div class="special_content-items">
+                                <a href="./detail.html">
+                                    <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/m/e/menu_menu_tra_sua_1__1.jpg.webp" alt="">
+                                    <div class="item_content">
+                                        <span class="title">
+                                            Combo 2
+                                        </span>
+                                        <div class="food">
+                                            <p>
+                                                01 Milk Tea <br> 01 Chicken nuggets 
                                             </p>
                                         </div>
-                                        <div class="plus">
-                                            <i class="fa-solid fa-plus"></i>
+                                        <div class="oder">
+                                            <div class="cost">
+                                                <p class="new_price">
+                                                    40.000 ₫
+                                                </p>
+                                                <p class="old_price">
+                                                    <span>57.000 ₫</span>
+                                                </p>
+                                            </div>
+                                            <div class="plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="special_content-items">
-                            <a href="./detail.html">
-                                <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/m/e/menu_menu_16_.jpg.webp" alt="">
-                                <div class="item_content">
-                                    <span class="title">
-                                        Combo 189
-                                    </span>
-                                    <div class="food">
-                                        <p>
-                                            01 Fried Chicken <br> 01 Chicken Buldak
-                                        </p>
-                                    </div>
-                                    <div class="oder">
-                                        <div class="cost">
-                                            <p class="new_price">
-                                                189.000 ₫
+                                </a>
+                            </div>
+                            <div class="special_content-items">
+                                <a href="./detail.html">
+                                    <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/m/e/menu_menu_16_.jpg.webp" alt="">
+                                    <div class="item_content">
+                                        <span class="title">
+                                            Combo 69K
+                                        </span>
+                                        <div class="food">
+                                            <p>
+                                                01 Fried Chicken <br> 01 Spaghetti 
                                             </p>
-                                            <p class="old_price">
-                                                <span>280.000 ₫</span>
-                                            </p>
                                         </div>
-                                        <div class="plus">
-                                            <i class="fa-solid fa-plus"></i>
+                                        <div class="oder">
+                                            <div class="cost">
+                                                <p class="new_price">
+                                                    69.000 ₫
+                                                </p>
+                                                <p class="old_price">
+                                                    <span>101.000 ₫</span>
+                                                </p>
+                                            </div>
+                                            <div class="plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
+                            <div class="special_content-items">
+                                <a href="./detail.html">
+                                    <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/m/e/menu_189k_1__1.jpg.webp" alt="">
+                                    <div class="item_content">
+                                        <span class="title">
+                                            Combo 189
+                                        </span>
+                                        <div class="food">
+                                            <p>
+                                                01 Fried Chicken <br> 01 Chicken Buldak
+                                            </p>
+                                        </div>
+                                        <div class="oder">
+                                            <div class="cost">
+                                                <p class="new_price">
+                                                    189.000 ₫
+                                                </p>
+                                                <p class="old_price">
+                                                    <span>280.000 ₫</span>
+                                                </p>
+                                            </div>
+                                            <div class="plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="special_content-items">
+                                <a href="./detail.html">
+                                    <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/h/_/h_nh_menu_chill2_1_2_.jpg.webp" alt="">
+                                    <div class="item_content">
+                                        <span class="title">
+                                            Combo Party Chill
+                                        </span>
+                                        <div class="food">
+                                            <p>
+                                                02 Fried Chicken <br> 01 Italian Noodle
+                                            </p>
+                                        </div>
+                                        <div class="oder">
+                                            <div class="cost">
+                                                <p class="new_price">
+                                                    119.000 ₫
+                                                </p>
+                                                <p class="old_price">
+                                                    <span>169.000 ₫</span>
+                                                </p>
+                                            </div>
+                                            <div class="plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="special_content-items">
+                                <a href="./detail.html">
+                                    <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/h/_/h_nh_menu_chill2_1_2_.jpg.webp" alt="">
+                                    <div class="item_content">
+                                        <span class="title">
+                                            Combo Party Explosion
+                                        </span>
+                                        <div class="food">
+                                            <p>
+                                                01 Fried Chicken <br> 01 Italian Noodle
+                                            </p>
+                                        </div>
+                                        <div class="oder">
+                                            <div class="cost">
+                                                <p class="new_price">
+                                                    149.000 ₫
+                                                </p>
+                                                <p class="old_price">
+                                                    <span>239.000 ₫</span>
+                                                </p>
+                                            </div>
+                                            <div class="plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="special_content-items">
+                                <a href="./detail.html">
+                                    <img src="https://www.lotteria.vn/media/catalog/product/cache/400x400/h/_/h_nh_menu_burger-03.jpg.webp" alt="">
+                                    <div class="item_content">
+                                        <span class="title">
+                                            Rice Burger Kimchi 49k
+                                        </span>
+                                        <div class="oder">
+                                            <div class="cost">
+                                                <p class="new_price">
+                                                    49.000 ₫
+                                                </p>
+                                                <p class="old_price">
+                                                    <span>69.000 ₫</span>
+                                                </p>
+                                            </div>
+                                            <div class="plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="special_dot">
-                    <i class="fa-solid fa-circle special_dot-active"></i>
-                    <i class="fa-solid fa-circle"></i>
+                    <div class="special_dot-item special_dot-active"></div>
+                    <div class="special_dot-item"></div>
+                    <div class="special_dot-item"></div>
+                    <div class="special_dot-item"></div>
+                    <div class="special_dot-item"></div>
                 </div>
             </div>
             <div class="line"></div>
@@ -496,43 +587,49 @@
         </div>
     </div>
     <script src="./assets/javascript/javascript.js">
-        
-
     </script>
     <script>
-                let active = 1;
-        let slideInterval = setInterval(() => {
-            nextSlide
-        }, 3000);
+        const items=document.getElementsByClassName("banner_item");
+        const dots = document.getElementsByClassName("banner_dot-item");
+        let active = 0;
         
-        function currentSlide(n) {
-            clearInterval(slideInterval);
-            showSlide(active=n);
-            slideInterval= setInterval(() => {
-               nextSlide 
-            }, 3000);
+        function showSlide(index) {
+                for(let j=0;j<items.length;j++) {
+                    items[j].style.display="none";
+                }
+                items[index].style.display="block";
+                for(let k=0;k<dots.length;k++) {
+                    if(dots[k].classList.contains("banner_dot-active")){
+                        dots[k].classList.remove("banner_dot-active");
+                    }
+                }
+                dots[index].classList.add("banner_dot-active");
+        } 
+
+        for(let i=0;i<items.length;i++) {
+            dots[i].addEventListener("click", function() {
+                clearInterval(autoChangeSlide);
+                showSlide(i);
+                active=i;
+                autoChangeSlide = setInterval(function(){
+                    active++;
+                    if(active>items.length-1){
+                        active=0;
+                    }
+                    showSlide(active);
+                },5000)
+            })
         }
 
-        function showSlide(n){
-            let i;
-            let item = document.getElementsByClassName('banner_item');
-            let dots = document.getElementsByClassName('dot');
-            for (i = 0; i < item.length; i++) {
-                item[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" dot_active", "");
-            }
-            item[active-1].style.display = "block";
-            dots[active-1].classList.add("dot_active");
-        }
-
-        function nextSlide() {
+        let autoChangeSlide = setInterval(function(){
             active++;
-            let item = document.getElementsByClassName('banner_item');
-            if (active > item.length) { active = 1; } // Quay lại hình đầu tiên nếu đến hình cuối
+            if(active>items.length-1){
+                active=0;
+            }
             showSlide(active);
-        }
+        },5000)
+
+        showSlide(active);
     </script>
 </body>
 </html>

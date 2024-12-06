@@ -18,11 +18,12 @@ body {
 }
 
 /* ---------------- Header ------------------ */
-#main_detail {
+
+#main {
 
 }
 
-#main_detail .header_container {
+#main .header_container {
     width: 100vw;
     display: block;
     position: fixed;
@@ -91,9 +92,12 @@ body {
     margin-left: -20px;
 }
 
+/* -------------- ------------------ */
+
 .header_info {
     margin-left: auto;  
     margin-top: 12px; 
+    user-select: none;
 }
 
 .header_info-setting {
@@ -101,10 +105,28 @@ body {
 }
 
 .header_info-language {
-    
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+    position: relative;
+    border-radius: 4px;
+    user-select: none;
 }
 
-.header_info-setting .language {
+.lang_drop {
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .15);
+    padding-bottom: 5px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 99;
+}
+
+.lang_drop:hover {
+    color: #007aff;
+}
+
+.header_info-setting .lang_en, .header_info-setting .lang_vn {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -116,20 +138,20 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 2px 10px -4px rgba(0,0,0,0.3);
+    /* position: relative; */
 }
 
-.header_info-setting .language:first-child {
+.header_info-setting .lang_vn {
+    background-image: url("https://www.lotteria.vn/grs-static/images/icon-vn.svg");
+    padding-left: 25px;
+}
+
+.header_info-setting .lang_en {
     background-image: url("../img/Australia\ Logo.svg");
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-
+    /* border-radius: 5px; */
 }
 
-
-.header_info-setting .language:first-child::after {
+.header_info-setting .lang_en::after {
     position: absolute;
     content: '';
     display: block;
@@ -139,24 +161,39 @@ body {
     top: 10px;
 }
 
-.language span {
-    padding: 4px 25px 3px 25px;
+.lang_drop-active {
+    border-bottom-left-radius: 0px ;
+    border-bottom-right-radius: 0px;
+}
+
+
+/* ---------------------- DownLoad ------------------------ */
+
+.dowload_container {
+    display: flex;
+    border-radius: 4px;
+    background-color: #ff5b6a;
+    width: 115px;
+    box-shadow: 2px 2px 10px -7px #000;
+    margin-left: 18px;
+    position: relative;
+    padding: 2px 0px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .header_info-setting .dowload {
-    display: flex;
-    font-size: 12px;
-    border-radius: 5px;
-    background-color: #ff5b6a;
-    color: #fffcfd;
-    align-items: center;
-    width: 115px;
-    padding-right: 5px;
-    padding-bottom: 7px;
-    box-shadow: 2px 2px 10px -7px #000;
-    text-decoration: none;
-    margin-left: 18px;
+    transform: translateY(-1px);
+    padding-bottom: 3px;
 }
+
+.dowload span {
+    padding-left: 2px;
+    transform: translateY(-40px);
+    color: #fffcfd;
+    font-size: 12px;
+}
+
 
 .header_info-setting .dowload img {
     width: 15px;
@@ -167,10 +204,39 @@ body {
     transform: translateY(4px);
 }
 
-.dowload span {
-    margin-left: 4px;
-    transform: translateY(-40px);
+
+.dowload_drop {
+    position: absolute;
+    display: none;
+    background-color: #D50000;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .15);
+    top: 25px;
+    width: 100%;
+    z-index: 10;
 }
+
+.dowload_drop-inner {
+    padding: 10px 8px 8px;
+    justify-items: center;
+}
+
+.dowload_drop-inner a img {
+    
+}
+
+.dowload_drop-inner a {
+    display: block;
+
+}
+
+.dowload_drop-active {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* ------------------- INFO ----------------- */
 
 .header_info-user  {
     display: flex;
@@ -184,7 +250,16 @@ body {
     box-shadow: 0px 4px 10px -2px rgba(0,0,0,0.3);
     text-align: center;
     align-content: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
     cursor: pointer;
+}
+
+.header_info-user li a{
+    
 }
 
 .header_info-user li+li {
@@ -198,7 +273,13 @@ body {
 .header_info-user li a img{
     background-color: #fff;
     color: #000;
+    transform: translate(-1px, 1px);
 }
+
+.header_info-user li:nth-child(2) a img {
+    transform: translateX(0px);
+}
+
 
 /* ---------------- Content --------------- */
 

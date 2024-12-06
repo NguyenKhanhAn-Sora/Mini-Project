@@ -31,11 +31,23 @@ plus.addEventListener("click", function() {
 
 
 subtract.addEventListener("mouseover", subtractMouseOver);
-subtract.addEventListener("click", function() {
-    subtractQuantity();
-    animateCounter('target', 500);
-    animateCounter('target2', 500);
-    animateCounter('target3', 500);
+subtract.addEventListener("click", function(event) {
+    if(quantity > 1) {
+        quantity--;
+        let target = priceTarget;
+        target=target*quantity;
+        price.innerText=target;
+        value.innerText=quantity;
+        let target2 = priceTarget2;
+        target2=target2*quantity;
+        price2.innerText=target2;
+        let target3 = priceTarget3;
+        target3=target3*quantity;
+        price3.innerText=target3;
+        animateCounter('target', 500);
+        animateCounter('target2', 500);
+        animateCounter('target3', 500);
+    }
 });
 
 function plusMouseOver() {
@@ -65,21 +77,6 @@ function plusQuantity() {
     price3.innerText=target3;
 }
 
-function subtractQuantity() {
-    if(quantity > 1) {
-        quantity--;
-        let target = priceTarget;
-        target=target*quantity;
-        price.innerText=target;
-        value.innerText=quantity;
-        let target2 = priceTarget2;
-        target2=target2*quantity;
-        price2.innerText=target2;
-        let target3 = priceTarget3;
-        target3=target3*quantity;
-        price3.innerText=target3;
-    }
-}
 
 function animateCounter(target, duration) {
     const element = document.getElementById(target);
@@ -95,7 +92,38 @@ function animateCounter(target, duration) {
         }
         element.textContent = Math.round(currentValue).toLocaleString('vi-VN');
     }, 10);
-
 }
 
 
+// ------------------------ Lang_Drop-Active--------------
+
+const langContainer = document.getElementsByClassName("header_info-language")[0];
+const langDrop = document.getElementsByClassName("lang_drop")[0];
+
+langContainer.addEventListener("click", function() {
+    if(langContainer.classList.contains("lang_drop-active")){
+        langContainer.classList.remove("lang_drop-active");
+        langDrop.style.display="none";
+    }
+    else{
+        langContainer.classList.add("lang_drop-active");
+        langDrop.style.display="block";
+    }
+});
+
+
+// ------------------Dowload_Drop-active-----------------
+
+const dowloadContainer = document.getElementsByClassName("dowload_container")[0];
+const dowloadDrop = document.getElementsByClassName("dowload_drop")[0];
+
+dowloadContainer.addEventListener("click", function() {
+    if(dowloadContainer.classList.contains("dowload_drop-active")){
+        dowloadContainer.classList.remove("dowload_drop-active");
+        dowloadDrop.style.display="none";
+    }
+    else{
+        dowloadContainer.classList.add("dowload_drop-active");
+        dowloadDrop.style.display="block";
+    }
+})
