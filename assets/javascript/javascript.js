@@ -108,12 +108,70 @@ for(let i=0;i<specialDot.length;i++) {
 
 const headerInfoUser = document.getElementsByClassName("header_info-user--item");
 
+const userInfoMenu = document.getElementsByClassName("menu_info-user")[0];
+let userInfoMenuFlag = false;
+
 for(let i=0;i<headerInfoUser.length;i++) {
     headerInfoUser[i].addEventListener("click", function(event) {
         if(LoginSuccess==false) {
             loginModal.style.display="block";
         }
+        else if(i==0) {
+            locateModal.style.display="block";
+        }
+        else if(i==1 && userInfoMenuFlag==false) {
+            userInfoMenu.style.display="block";
+            userInfoMenuFlag=true;
+            userInfoMenu.focus();
+        }
+        else if(i==1 && userInfoMenuFlag==true) {
+            userInfoMenu.style.display="none";
+            userInfoMenuFlag=false;
+        }
     })
 }
 
+userInfoMenu.addEventListener("blur", function() {
+    userInfoMenu.style.display="none";
+})
 
+// ---------------------Advers Modal ----------------
+const advers = document.getElementsByClassName("advers_modal")[0];
+const buttonCloseAdvers = document.getElementsByClassName("btn_advers-close")[0];
+
+buttonCloseAdvers.addEventListener("click", function() {
+    advers.style.display = "none";
+})
+
+// -------------- Button Locate User Trans -----------------
+
+const btnDefaultLocate = document.getElementsByClassName("btn_default-locate")[0];
+const btnDefaultTrans = document.getElementsByClassName("btn_default-trans")[0];
+
+let btnDefaultTransFlag = false;
+
+btnDefaultLocate.addEventListener("click", function() {
+    if(btnDefaultTransFlag==false) {
+        btnDefaultTrans.style.transform = "translateX(18px)";
+        btnDefaultLocate.style.backgroundColor = "#ff5b6a";
+        btnDefaultTrans.style.border = "1px solid #ff5b6a";
+        btnDefaultTransFlag=true;
+    }
+    else{
+        btnDefaultTrans.style.transform = "translateX(0px)";
+        btnDefaultLocate.style.backgroundColor = "#b4b4b4";
+        btnDefaultTrans.style.border="1px solid #b4b4b4"
+        btnDefaultTransFlag=false;
+    }
+})
+
+
+
+
+
+const closeLocateModal = document.getElementsByClassName("btn_close-locate")[0];
+const locateModal = document.getElementsByClassName("user_info-locate")[0   ];
+
+closeLocateModal.addEventListener("click", function() {
+    locateModal.style.display="none";
+})
