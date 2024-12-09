@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #FF5B6A transparent;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+    /* margin: 0px auto; */
+    height: 300vh;
+    overflow-x: hidden;
+    background-color: #fffcfe;
+
+}
+
+/* ------------------ Header -------------------- */
+
+#main {
+
+}
+
+.header_container {
+    height: 100px;
+    width: 100%;
+    align-content: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 1110px;
+    margin: 0 auto;
+}
+
+.header_logo {
+    margin-right: 47px;
+}
+
+.header_logo img {
+    width: 67px;
+}
+
+
+
+
+.header_checkout {
+    display: flex;
+    justify-content: space-between;
+    width: 580px;
+    position: relative;
+    margin-left: -15px;
+}
+
+.header_checkout::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 495px;
+    background-color: #c4c4c4;
+    height: 1px;
+    top: 18px;
+    left: 35px;
+}
+
+.left_checkout {
+    text-align: center;
+    position: relative;
+    /* text-align: left; */
+}
+
+.left_checkout span {
+    font-size: 16px;
+    color: #FF5B6A;
+    text-align: center;
+}
+
+.left_checkout span:first-child, .right_checkout span:first-child {
+    margin: 0px 16px 10px;
+    border-radius: 999px;
+    display: block;
+    border: 1px solid #FF5B6A;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+}
+
+.left_checkout span:first-child::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 999px;
+    background-color: #FF5B6A;
+    top: 7px;
+    left: 23px;
+}
+
+.right_checkout {
+
+}
+
+.left_checkout span:last-child, .right_checkout span:last-child {
+    line-height: 1.4;
+}
+
+/* -------------------- Content ------------------- */
+
+.content {
+   
+}
+
+.content_container {
+    padding: 35px 15px 60px;
+    width: 1140px;
+    margin: 0px auto;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    margin-top: 100px;
+}
+
+.left_content span:last-child {
+    font-size: 16px;
+    color: #142f43;
+}
+
+.left_content {
+    padding-right: 24px;
+    width: 69%;
+}
+
+.left_header {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.left_header span:first-child{
+    font-size: 18px;
+    font-weight: 700;
+    color: #142f43;
+    margin-right: 10px;
+}
+
+.left_header a {
+    /* display: bloc; */
+    margin-left: auto;
+    text-decoration: none;
+    color: #FF5B6A;
+    font-weight: 500;
+}
+
+.right_content {
+
+}
+
+.left_note-oder {
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .15);
+    margin-bottom: 30px;
+}
+
+.note_oder-title {
+    color: #142f43;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 7px;
+    display: block;
+    font-weight: 700;
+}
+
+#note_oder-input {
+    padding: 7px 0px;
+    line-height: 1.5;
+    border: none;
+    border-bottom: 1px solid #FF5B6A;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+}
+
+#note_oder-input::placeholder {
+    color: rgb(99, 96, 96);
+}
+
+.left_contract {
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .15);
+    margin-bottom: 30px;
+}
+
+.contract-title {
+    color: #142f43;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    display: block;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.left_contract label {
+    color: #142f43;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 10px;
+    position: relative;
+
+}
+
+.left_contract a {
+    color: #FF5B6A;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#contract-accept {
+    background-color: #FF5B6A;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: translateY(3px);
+}
+
+.left_contract label::after {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    /* background-color: #000; */
+    border-left: 2px solid transparent;
+    border-bottom:  2px solid transparent;
+    transform: rotate(-45deg);
+    top: 2px;
+    left: -21px;
+    cursor: pointer;
+}
+
+.left_contract label.active::after {
+    border-left: 2px solid #fff;
+    border-bottom:  2px solid #fff;
+    display: block;
+}
