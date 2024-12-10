@@ -10,12 +10,12 @@ const priceTarget2 = parseInt(price2.innerText);
 let price3 = document.getElementById("target3");
 const priceTarget3 = parseInt(price3.innerText);
 
-const tlsprice = priceTarget.toLocaleString('vi-VN');
-price.innerText=tlsprice;
-const tlsprice2 = priceTarget2.toLocaleString('vi-VN');
-price2.innerText=tlsprice2;
-const tlsprice3 = priceTarget3.toLocaleString('vi-VN');
-price3.innerText=tlsprice3;
+// const tlsprice = priceTarget.toLocaleString('vi-VN');
+// price.innerText=tlsprice;
+// const tlsprice2 = priceTarget2.toLocaleString('vi-VN');
+// price2.innerText=tlsprice2;
+// const tlsprice3 = priceTarget3.toLocaleString('vi-VN');
+// price3.innerText=tlsprice3;
 
 // animateCounter('target', 500);
 // animateCounter('target2', 500);
@@ -78,21 +78,21 @@ function plusQuantity() {
 }
 
 
-function animateCounter(target, duration) {
-    const element = document.getElementById(target);
-    const finalValue = element.innerHTML;
-    const increment = finalValue / (duration / 10); // Update every 10ms
-    let currentValue = 0;
+// function animateCounter(target, duration) {
+//     const element = document.getElementById(target);
+//     const finalValue = element.innerHTML;
+//     const increment = finalValue / (duration / 10); // Update every 10ms
+//     let currentValue = 0;
 
-    const interval = setInterval(() => {
-        currentValue += increment;
-        if (currentValue >= finalValue) {
-            currentValue = finalValue; // Ensure it stops at 1000
-            clearInterval(interval);
-        }
-        element.textContent = Math.round(currentValue).toLocaleString('vi-VN');
-    }, 10);
-}
+//     const interval = setInterval(() => {
+//         currentValue += increment;
+//         if (currentValue >= finalValue) {
+//             currentValue = finalValue; // Ensure it stops at 1000
+//             clearInterval(interval);
+//         }
+//         element.textContent = Math.round(currentValue).toLocaleString('vi-VN');
+//     }, 10);
+// }
 
 
 // ------------------------ Lang_Drop-Active--------------

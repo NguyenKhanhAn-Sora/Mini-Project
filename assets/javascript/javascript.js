@@ -101,7 +101,6 @@ for(let i=0;i<specialDot.length;i++) {
         }
         specialDot[i].classList.add("special_dot-active");
     })
-    
 }
 
 // ---------------- Login_Modal ---------------------
@@ -114,8 +113,12 @@ let userInfoMenuFlag = false;
 for(let i=0;i<headerInfoUser.length;i++) {
     headerInfoUser[i].addEventListener("click", function(event) {
         if(LoginSuccess==false) {
+            if(i==3) {
+                event.preventDefault();
+            }
             loginModal.style.display="block";
         }
+        
         else if(i==0) {
             locateModal.style.display="block";
         }
@@ -164,7 +167,6 @@ btnDefaultLocate.addEventListener("click", function() {
         btnDefaultTransFlag=false;
     }
 })
-
 
 
 

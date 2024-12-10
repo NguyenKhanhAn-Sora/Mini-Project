@@ -131,6 +131,7 @@ body {
     line-height: 1.2;
     margin-bottom: 25px;
     margin-top: 100px;
+    display: flex;
 }
 
 .left_content span:last-child {
@@ -253,7 +254,7 @@ body {
     border-bottom:  2px solid transparent;
     transform: rotate(-45deg);
     top: 2px;
-    left: -21px;
+    left: -20px;
     cursor: pointer;
 }
 
@@ -261,4 +262,321 @@ body {
     border-left: 2px solid #fff;
     border-bottom:  2px solid #fff;
     display: block;
+}
+
+.left_contract p {
+    color: #FF5B6A;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35px;
+    line-height: 1.5;
+    padding-top: 5px;
+    display: none;
+}
+
+
+/* ------------------ Deliver ----------------------- */
+
+.right_content {
+    width: 31%;
+}
+
+.right_deliver {
+    padding: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .15);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.deliver-to {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #6b6c6c;
+}
+
+.right_deliver-title {
+    font-size: 14px;
+    color: #6b6c6c;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.right_store {
+    display: flex;
+
+}
+
+.right_store a {
+    background-image: url("https://www.lotteria.vn/grs-static/images/icon-edit.svg");
+    background-repeat: no-repeat;
+    margin-left: auto;
+}
+
+.right_store span:first-child{
+    font-size: 14px;
+    color: #6b6c6c;
+    line-height: 1.4;
+}
+
+.note-time {
+    font-size: 14px;
+    color: #6b6c6c;
+    margin-right: -15px;
+}
+
+
+
+.right_option {
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .15);
+    border-radius: 15px;
+}
+
+.right_option  h4{
+    font-size: 16px;
+    font-weight: 700;
+    color: #142f43;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.option-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.option-items span:first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.line {
+    width: 315px;
+    background-color: #FFEAE3;
+    height: 1px;
+    margin: 16px 0px;
+}
+
+.option-items div {
+    color: #142f43;
+    display: flex;
+    align-items: center;
+}
+
+.btn_default-locate {
+    width: 38px;
+    height: 20px;
+    background-color: #b4b4b4;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin-right: 10px;
+    transition: background-color 0.4s ease;
+}
+
+.btn_default-trans {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #b4b4b4;
+    background-color: #fff;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.4s ease;
+    transform: translateX(0px);
+}
+
+/* ------------------ Right Total--------------- */
+
+.right_total {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .15);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.sub-total {
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #FF5B6A;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #142f43;
+}
+
+.total {
+    padding: 12px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #142f43;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.total span:last-child span {
+    padding-left: 5px;
+    font-weight: 600;
+}
+
+.total-footer {
+    background-color: #FF5B6A;
+    width: 100%;
+    height: 100%;
+    margin: 0px -15px;
+    width: 345px;
+    text-align: center;
+    margin-bottom: -15px;
+    height: 60px;
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+.total-footer button {
+    color: #fff;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: #FF5B6A;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+/* -------------------- Footer ----------------- */
+
+.footer {
+    width: 1110px;
+    margin: 0 auto;;
+}
+
+.footer_container {
+    width: 1110px;
+    margin: 0 -30px 0 -15px;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_footer {
+    display: flex;
+    color: #142f43;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.left_footer span:first-child {
+    font-weight: 600;
+}
+
+.left_footer span:last-child {
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.right_footer {
+    display: flex;
+    transform: translateX(65px);
+}
+
+.right_footer div a{
+    padding-right: 20px;
+    margin-right: 20px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #142f43;
+}
+
+.right_footer div+div {
+    position: relative;
+}
+
+.right_footer div+div a::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 10px;
+    background-color: #142f43;
+    left: -20px;
+    top: 3px;
+}
+
+.right_footer div a:hover {
+    color: #FF5B6A;
+}
+
+
+/* ------------------- Icon Staff ----------------- */
+.icon-staff {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    animation-name: icon-animate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    z-index: 99;
+}
+
+.icon-staff img {
+    width: 100px;
+    height: 145px;
+}
+
+@keyframes icon-animate {
+    0% {
+        transform: scale(1) rotate(0deg) ;
+       
+    }
+
+    15% {
+        transform: scale(1.2) rotate(-5deg);
+      
+    }
+
+    30% {
+        transform: scale(1) rotate(0deg) ;
+    }
+
+    40% {
+        transform: scale(1.3) rotate(-10deg);
+    }
+
+    50% {
+        transform: scale(1.3) rotate(10deg);
+    }
+
+    60% {
+        transform: scale(1.3) rotate(-10deg);
+    }
+
+    75% {
+        transform: scale(1.3) rotate(10deg);
+    }
+
+    85% {
+        transform: scale(1.3) rotate(0deg);
+    }
+
+    /* 87% {
+        transform: scale(1.27) rotate(0deg);
+    } */
+
+    /* 95% {
+        transform: scale(1.15) rotate(0deg);
+    } */
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }
