@@ -19,11 +19,11 @@ body {
 
 /* ---------------- Header ------------------ */
 
-#main {
+#main_detail {
 
 }
 
-#main .header_container {
+#main_detail .header_container {
     width: 100vw;
     display: block;
     position: fixed;

@@ -10,29 +10,20 @@ const priceTarget2 = parseInt(price2.innerText);
 let price3 = document.getElementById("target3");
 const priceTarget3 = parseInt(price3.innerText);
 
-// const tlsprice = priceTarget.toLocaleString('vi-VN');
-// price.innerText=tlsprice;
-// const tlsprice2 = priceTarget2.toLocaleString('vi-VN');
-// price2.innerText=tlsprice2;
-// const tlsprice3 = priceTarget3.toLocaleString('vi-VN');
-// price3.innerText=tlsprice3;
+let oldValue = priceTarget;
+let newValue=0;
 
-// animateCounter('target', 500);
-// animateCounter('target2', 500);
-// animateCounter('target3', 500);
 
 plus.addEventListener("mouseover", plusMouseOver);
 plus.addEventListener("click", function() {
     plusQuantity();
-    animateCounter('target', 500);
-    animateCounter('target2', 500);
-    animateCounter('target3', 500);
 });
 
 
 subtract.addEventListener("mouseover", subtractMouseOver);
 subtract.addEventListener("click", function(event) {
     if(quantity > 1) {
+
         quantity--;
         let target = priceTarget;
         target=target*quantity;
@@ -44,9 +35,9 @@ subtract.addEventListener("click", function(event) {
         let target3 = priceTarget3;
         target3=target3*quantity;
         price3.innerText=target3;
-        animateCounter('target', 500);
-        animateCounter('target2', 500);
-        animateCounter('target3', 500);
+        // transToViNumber(target,target2,target3);
+        animateCounter(1500);
+        
     }
 });
 
@@ -75,25 +66,9 @@ function plusQuantity() {
     let target3 = priceTarget3;
     target3=target3*quantity;
     price3.innerText=target3;
+    // transToViNumber(target, target2, target3);
+    animateCounter(1500);
 }
-
-
-// function animateCounter(target, duration) {
-//     const element = document.getElementById(target);
-//     const finalValue = element.innerHTML;
-//     const increment = finalValue / (duration / 10); // Update every 10ms
-//     let currentValue = 0;
-
-//     const interval = setInterval(() => {
-//         currentValue += increment;
-//         if (currentValue >= finalValue) {
-//             currentValue = finalValue; // Ensure it stops at 1000
-//             clearInterval(interval);
-//         }
-//         element.textContent = Math.round(currentValue).toLocaleString('vi-VN');
-//     }, 10);
-// }
-
 
 // ------------------------ Lang_Drop-Active--------------
 
@@ -127,3 +102,32 @@ dowloadContainer.addEventListener("click", function() {
         dowloadDrop.style.display="block";
     }
 })
+
+// -------------------- Count Number ----------------
+
+const elementList = document.getElementsByClassName('number_count');
+
+function animateCounter(duration) {
+    for (let i = 0; i < elementList.length; i++) {
+        const finalValue = parseInt(elementList[i].innerHTML); // Chuyển thành số
+        const increment = finalValue / (duration / 20); // Cập nhật mỗi 10ms
+        let currentValue = 0;
+
+        const interval = setInterval(() => {
+            currentValue += increment;
+            if (currentValue >= finalValue) {
+                currentValue = finalValue; // Dừng tại giá trị cuối cùng
+                clearInterval(interval);
+            }
+            // Cập nhật giá trị hiển thị
+            elementList[i].innerHTML = Math.round(currentValue).toLocaleString('vi-VN');
+        }, 10);
+    }
+}
+
+animateCounter(1500); 
+
+function transToViNumber(value) {
+    
+}
+

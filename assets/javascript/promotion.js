@@ -165,8 +165,47 @@ function showProduct() {
         title.appendChild(titleName);
         title.innerHTML=product[i].name;
     
-        const titleButton = document.createElement('button');
-        title.appendChild(titleButton);
+        const titleHeartIcon = document.createElement('div');
+        titleHeartIcon.className="heart_icon";
+        title.appendChild(titleHeartIcon);
+
+        const heartButton1 = document.createElement('button');
+        heartButton1.id = "heart1";
+        heartButton1.className="btn_heart"
+        titleHeartIcon.appendChild(heartButton1);
+
+        const heartButton2 = document.createElement('button');
+        heartButton2.id = "heart2";
+        heartButton2.className="btn_heart"
+        titleHeartIcon.appendChild(heartButton2);
+
+        const heartButton3 = document.createElement('button');
+        heartButton3.id = "heart3";
+        heartButton3.className="btn_heart"
+        titleHeartIcon.appendChild(heartButton3);
+
+        let heartFlag = false;
+
+        heartButton1.addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            if(heartFlag==false) {
+                heartButton1.style.backgroundImage=`url("https://www.lotteria.vn/grs-static/images/icon-save-active.svg")`;
+                heartFlag=true;
+                heartButton1.classList.add("active");
+                heartButton2.classList.add("activefly1")
+                heartButton3.classList.add("activefly2")
+            }
+            else{
+                heartButton1.style.backgroundImage=`url("	https://www.lotteria.vn/grs-static/images/icon-save.svg")`;
+                heartFlag=false;
+                heartButton1.classList.remove("active");
+                heartButton2.classList.remove("activefly1");
+                heartButton3.classList.remove("activefly2");
+            }
+        })
+    
+        
     
     
         // ------------------------------------------
@@ -216,7 +255,10 @@ function showProduct() {
         const icon = document.createElement('i');
         icon.className="fa-solid fa-plus";
         plus.appendChild(icon);
+
+        
     }
+    
 }
 
 showProduct();
@@ -373,3 +415,10 @@ for(let i=0;i<menuItemLink.length;i++) {
         }
 })
 }
+
+
+
+// ------------------------ Heart -----------------------
+
+
+

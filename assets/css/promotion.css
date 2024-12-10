@@ -401,6 +401,10 @@ body {
     text-decoration: none;
 }
 
+.cart_list-item a:visited {
+    color: #142f43;
+}
+
 .cart_list-item a img {
     width: calc(100% + 24px);
     margin-left: -12px;
@@ -422,17 +426,122 @@ body {
     align-content: center;
 }
 
-.item_content .title button {
+.heart_icon {
+    position: relative;
+}
+
+.btn_heart:first-child{
     background-image: url("	https://www.lotteria.vn/grs-static/images/icon-save.svg");
     border: none;
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 27px;
-    height: 23px;
+    width: 29px;
+    height: 24px;
     margin-right: 12px;
-    /* background-position: -5px 0px; */
+    cursor: pointer;
+    /* position: absolute; */
 }
+
+.btn_heart+.btn_heart {
+    right: 0;
+    background-image: url("https://www.lotteria.vn/grs-static/images/icon-save-active.svg");
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 29px;
+    height: 24px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: absolute;
+    /* transform: scale(0.5); */
+    /* display: none; */
+}
+
+.btn_heart:last-child {
+    transform: scale(0);
+}
+
+.btn_heart:nth-child(2) {
+    transform: scale(0);
+}
+
+.btn_heart.active {
+    animation-name: heart;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+.btn_heart.activefly1 {
+    animation-name: heartfly1;
+    animation-duration: 1.5s; 
+    /* animation-delay: 0.2s; */
+    animation-timing-function: linear;  
+}
+
+.btn_heart.activefly2 {
+    animation-name: heartfly2;
+    animation-duration: 1.5s; 
+    /* animation-delay: 0.2s; */
+    animation-timing-function: linear;  
+}
+
+@keyframes heartfly1 {
+    0% {
+        opacity: 1;
+        transform: scale(0) translate(0,0);
+    }
+
+    75% {
+        opacity: 0.8;
+        transform: scale(0.4) translate(35px,-35px);
+    }
+
+    100%{
+        opacity: 0;
+        transform: scale(0.5) translate(40px,-40px);
+    }
+}
+
+@keyframes heartfly2 {
+    from {
+        opacity: 1;
+        transform: scale(0) translate(0,0);
+    }
+    to{
+        opacity: 0;
+        transform: scale(0.3) translate(0px,-70px);
+    }
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+    }
+    33% {
+        transform: scale(1.2);
+    }
+    66%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: 1;
+    }
+}
+
+/* .btn_heart.active {
+    background-image: url("https://www.lotteria.vn/grs-static/images/icon-save-active.svg");
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 29px;
+    height: 24px;
+    margin-right: 12px;
+    cursor: pointer;
+    /* position: absolute; */
+/* } */ 
 
 .item_content .food p{
     color: #6e7e8a;
