@@ -175,7 +175,7 @@ btnDefaultLocate.addEventListener("click", function() {
 
 
 const closeLocateModal = document.getElementsByClassName("btn_close-locate")[0];
-const locateModal = document.getElementsByClassName("user_info-locate")[0   ];
+const locateModal = document.getElementsByClassName("user_info-locate")[0];
 
 closeLocateModal.addEventListener("click", function() {
     locateModal.style.display="none";

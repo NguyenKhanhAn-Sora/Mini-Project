@@ -110,7 +110,7 @@ const elementList = document.getElementsByClassName('number_count');
 function animateCounter(duration) {
     for (let i = 0; i < elementList.length; i++) {
         const finalValue = parseInt(elementList[i].innerHTML); // Chuyển thành số
-        const increment = finalValue / (duration / 20); // Cập nhật mỗi 10ms
+        const increment = finalValue / (duration / 20); // Cập nhật mỗi 20ms
         let currentValue = 0;
 
         const interval = setInterval(() => {
@@ -127,7 +127,54 @@ function animateCounter(duration) {
 
 animateCounter(1500); 
 
-function transToViNumber(value) {
-    
+
+// ----------------- Header ---------------------
+
+const loginModal = document.getElementsByClassName('login_modal')[0];
+const closeModal = document.getElementById("close_modal");
+
+const headerInfoUser = document.getElementsByClassName("header_info-user--item");
+
+const userInfoMenu = document.getElementsByClassName("menu_info-user")[0];
+let userInfoMenuFlag = false;
+
+const loginModalContainer = document.getElementById('login_modal-container');
+
+let LoginSuccess =true;
+
+for(let i=0;i<headerInfoUser.length;i++) {
+    headerInfoUser[i].addEventListener("click", function(event) {
+        if(LoginSuccess==false) {
+            if(i==3) {
+                event.preventDefault();
+            }
+            loginModal.style.display="flex";
+        }
+        
+        else if(i==0) {
+            locateModal.style.display="flex";
+        }
+        else if(i==1 && userInfoMenuFlag==false) {
+            userInfoMenu.style.display="block";
+            userInfoMenuFlag=true;
+            userInfoMenu.focus();
+        }
+        else if(i==1 && userInfoMenuFlag==true) {
+            userInfoMenu.style.display="none";
+            userInfoMenuFlag=false;
+        }
+    })
 }
 
+userInfoMenu.addEventListener("blur", function() {
+    userInfoMenu.style.display="none";
+})
+
+
+
+const closeLocateModal = document.getElementsByClassName("btn_close-locate")[0];
+const locateModal = document.getElementsByClassName("user_info-locate")[0];
+
+closeLocateModal.addEventListener("click", function() {
+    locateModal.style.display="none";
+})

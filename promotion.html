@@ -42,7 +42,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="dowload_container dowload_drop-active">
+                        <div class="dowload_container">
                             <div class="dowload">
                                 <img src="./assets/img/lotteria_logo.png" alt="Logo">
                                 <span>Download App</span>
@@ -60,23 +60,61 @@
                         </div>
                     </div>
                     <ul class="header_info-user">
-                        <li>
+                        <li class="header_info-user--item">
                             <a href="#!">
                                 <img src="./assets/img/icon-pos-2.svg" alt="">
                             </a>
                         </li>
-                        <li>
+                        <li class="header_info-user--item">
                             <a href="#!">
                                 <img src="./assets/img/icon-myaccount.svg" alt="">
                             </a>
+                            <ul class="menu_info-user">
+                                <li>
+                                    <a href="">
+                                        <img src="https://www.lotteria.vn/grs-static/images/icon-account-2.svg" alt="">
+                                        <span>Account Infomation</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="https://www.lotteria.vn/grs-static/images/icon-pos.svg" alt="">
+                                        <span>Shipping Address</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="https://www.lotteria.vn/grs-static/images/icon-history.svg" alt="">
+                                        <span>Oder History</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="https://www.lotteria.vn/grs-static/images/icon-save-2.svg" alt="">
+                                        <span>My menu / wishlist</span>
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="">
+                                    <img src="https://www.lotteria.vn/grs-static/images/icon-help.svg" alt="">
+                                    <span>Support</span>
+                                   </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="https://www.lotteria.vn/grs-static/images/icon-logout.svg" alt="">
+                                        <span>Sign out</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
+                        <li class="header_info-user--item">
                             <a href="#!">
                                 <img src="./assets/img/icon-notification.svg" alt="">
                             </a>
                         </li>
-                        <li>
-                            <a href="#!">
+                        <li class="header_info-user--item">
+                            <a href="./cart.html">
                                 <img src="./assets/img/icon-cart.svg" alt="">
                             </a>
                         </li>
@@ -616,6 +654,43 @@
             </div>
             <div class="footer_since">
                 <span>© 2022 Lotteria All Rights Reserved</span> <span>Site by LDCC</span>
+            </div>
+        </div>
+    </div>
+    <div class="user_info-locate">
+        <div class="locate_container">
+            <span class="locate_container-title">Vui lòng nhập địa chỉ của bạn (địa chỉ này sẽ được dùng làm địa chỉ giao hàng). Hệ thống sẽ tìm cửa hàng gần nơi bạn sinh sống.</span>
+            <label for="input_address" class="label_address">Địa Chỉ</label>
+            <div class="input_address-container">
+                <input type="text" placeholder="Vui lòng nhập" id="input_address">
+                <button></button>
+                </button>
+            </div>
+            <div class="locate_container-row">
+                <div>
+                    <label for="input_address-name">Tên địa chỉ</label>
+                    <input id="input_address-name" type="text" placeholder="Gym / Nhà riêng / Cơ quan">
+                </div>
+                <div>
+                    <label for="input_address-note">Ghi chú</label>
+                    <input id="input_address-note" type="text" placeholder="Vui lòng nhập">
+                </div>
+                <div>
+                    <span class="btn_default-locate">
+                        <span class="btn_default-trans"></span>
+                    </span>
+                    <span>
+                        Đặt làm địa chỉ mặc định
+                    </span>
+                </div>
+            </div>
+            <div class="locate_container-footer">
+                <button class="btn_close-locate">
+                    Huỷ bỏ
+                </button>
+                <button>
+                    Thêm mới
+                </button>
             </div>
         </div>
     </div>
