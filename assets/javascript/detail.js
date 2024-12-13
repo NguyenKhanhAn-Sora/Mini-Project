@@ -107,10 +107,10 @@ dowloadContainer.addEventListener("click", function() {
 
 const elementList = document.getElementsByClassName('number_count');
 
-function animateCounter(duration) {
+function animateCounter() {
     for (let i = 0; i < elementList.length; i++) {
         const finalValue = parseInt(elementList[i].innerHTML); // Chuyển thành số
-        const increment = finalValue / (duration / 20); // Cập nhật mỗi 20ms
+        const increment = finalValue / 45; // Cập nhật mỗi 20ms
         let currentValue = 0;
 
         const interval = setInterval(() => {
@@ -121,11 +121,11 @@ function animateCounter(duration) {
             }
             // Cập nhật giá trị hiển thị
             elementList[i].innerHTML = Math.round(currentValue).toLocaleString('vi-VN');
-        }, 10);
+        },15);
     }
 }
 
-animateCounter(1500); 
+animateCounter(); 
 
 
 // ----------------- Header ---------------------
