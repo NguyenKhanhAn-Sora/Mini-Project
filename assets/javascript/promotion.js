@@ -146,6 +146,7 @@ function showProduct() {
     
         const cartListItemLink = document.createElement('a'); //Thẻ a trong item
         cartListItem.appendChild(cartListItemLink);
+        cartListItemLink.href = "";
     
         const itemImage = document.createElement('img');    //Image
         cartListItemLink.appendChild(itemImage);

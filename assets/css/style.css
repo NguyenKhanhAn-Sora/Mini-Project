@@ -1187,7 +1187,7 @@ form .warning {
     z-index: 2;
     width: 100vw;
     height: 100vh;
-    display: none;
+    /* display: none; */
 }
 
 .advers_main {
