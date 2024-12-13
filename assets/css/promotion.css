@@ -476,14 +476,12 @@ body {
 .btn_heart.activefly1 {
     animation-name: heartfly1;
     animation-duration: 1.5s; 
-    /* animation-delay: 0.2s; */
     animation-timing-function: linear;  
 }
 
 .btn_heart.activefly2 {
     animation-name: heartfly2;
     animation-duration: 1.5s; 
-    /* animation-delay: 0.2s; */
     animation-timing-function: linear;  
 }
 
