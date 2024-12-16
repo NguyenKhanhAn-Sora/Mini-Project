@@ -298,18 +298,12 @@ body {
     padding: 15px;
     top: 60px;
     right: -110px;
-    display: none;
-    animation: showMenuInfoUser 0.3s ease;
-    transform-origin: top;  
-}
-
-@keyframes showMenuInfoUser {
-    from {
-        transform: scale(0.2);
-    }
-    to {
-        transform: scale(1);
-    }
+    display: block;
+    transform-origin: top; 
+    transform: scale(0.2);
+    opacity: 0;
+    visibility:hidden; 
+    transition: all 0.3s ease;
 }
 
 .menu_info-user::before {

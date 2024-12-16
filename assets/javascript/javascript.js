@@ -108,7 +108,7 @@ for(let i=0;i<specialDot.length;i++) {
 
 const headerInfoUser = document.getElementsByClassName("header_info-user--item");
 
-const userInfoMenu = document.getElementsByClassName("menu_info-user")[0];
+const userInfoMenu = document.getElementById('menu_info-user');
 let userInfoMenuFlag = false;
 
 const loginModalContainer = document.getElementById('login_modal-container');
@@ -126,12 +126,16 @@ for(let i=0;i<headerInfoUser.length;i++) {
             locateModal.style.display="flex";
         }
         else if(i==1 && userInfoMenuFlag==false) {
-            userInfoMenu.style.display="block";
+            
+            userInfoMenu.style.transform = "scale(1)"
+            userInfoMenu.style.opacity = "1";
+            userInfoMenu.style.visibility="visible";
             userInfoMenuFlag=true;
-            userInfoMenu.focus();
         }
         else if(i==1 && userInfoMenuFlag==true) {
-            userInfoMenu.style.display="none";
+            userInfoMenu.style.transform = "scale(0.2)"
+            userInfoMenu.style.opacity = "0";
+            userInfoMenu.style.visibility="hidden";
             userInfoMenuFlag=false;
         }
     })

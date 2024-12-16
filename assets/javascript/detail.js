@@ -166,11 +166,8 @@ for(let i=0;i<headerInfoUser.length;i++) {
     })
 }
 
-userInfoMenu.addEventListener("blur", function() {
-    userInfoMenu.style.display="none";
-})
 
-
+// -----------------------------------------------
 
 const closeLocateModal = document.getElementsByClassName("btn_close-locate")[0];
 const locateModal = document.getElementsByClassName("user_info-locate")[0];
